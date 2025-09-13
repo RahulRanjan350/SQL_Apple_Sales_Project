@@ -1,9 +1,24 @@
+truncate table stores CASCADE;
+truncate table sales CASCADE;
+truncate table products CASCADE;
+truncate table warranty;
+truncate table category CASCADE;
+
+drop table stores CASCADE;
+drop table sales CASCADE;
+drop table products CASCADE;
+drop table warranty;
+drop table category CASCADE;
+
+
+
 /*1. **stores**: Contains information about Apple retail stores.
    - `store_id`: Unique identifier for each store.
    - `store_name`: Name of the store.
    - `city`: City where the store is located.
    - `country`: Country of the store.
    */
+   
 create table stores(
      store_id int primary key,
 	 store_name varchar(50),
@@ -11,12 +26,11 @@ create table stores(
 	country varchar(50)
 );
 
-copy stores
-from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project--
-      -Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---
-      Analyzing-Millions-of-Sales-Rows-main\stores.csv'
-delimiter ','
-csv header;
+COPY stores FROM 'D:\SQL Projects\Apple_Retail_store\stores.csv' 
+DELIMITER ','
+CSV HEADER;
+
+
 /*2. **category**: Holds product category information.
    - `category_id`: Unique identifier for each product category.
    - `category_name`: Name of the category. */
@@ -27,31 +41,33 @@ create table category(
 
  );
 
-copy category
-from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---
-      Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---
-	  Analyzing-Millions-of-Sales-Rows-main\category.csv'
-delimiter ','
-csv header;
+COPY category FROM 'D:\SQL Projects\Apple_Retail_store\category.csv' 
+DELIMITER ','
+CSV HEADER;
 /*3. **products**: Details about Apple products.
    - `product_id`: Unique identifier for each product.
    - `product_name`: Name of the product.
    - `category_id`: References the category table.
    - `launch_date`: Date when the product was launched.
-   - `price`: Price of the product. */
-   
- CREATE TABLE products (
-    product_id INT PRIMARY KEY,          -- Unique ID for each product
-    product_name VARCHAR(100) NOT NULL,  -- Product name
-    category_id INT,                     -- Foreign key referencing category table
-    launch_date DATE,                    -- Launch date of the product
-    price DECIMAL(10,2) NOT NULL,        -- Product price
-    CONSTRAINT fk_category FOREIGN KEY (category_id) REFERENCES category(category_id)
+   - `price`: Price of the product.
+   --'store_id : Unique identifier for each store '*/
+ drop table products;
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,           -- Unique ID for each product
+    product_name VARCHAR(100) NOT NULL,   -- Product name
+    category_id INT,                      -- Foreign key referencing category table
+    store_id INT,                         -- Foreign key referencing stores table
+    launch_date DATE,                     -- Launch date of the product
+    price DECIMAL(10,2) NOT NULL,         -- Product price
+    CONSTRAINT fk_category FOREIGN KEY (category_id) REFERENCES category(category_id),
+    CONSTRAINT fk_stores FOREIGN KEY (store_id) REFERENCES stores(store_id)
 );
-copy products
-from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\products.csv'
-delimiter ','
-csv header;
+
+
+COPY products FROM 'D:\SQL Projects\Apple_Retail_store\products.csv' 
+DELIMITER ','
+CSV HEADER;
+
 /*4. **sales**: Stores sales transactions.
    - `sale_id`: Unique identifier for each sale.
    - `sale_date`: Date of the sale.
@@ -69,10 +85,10 @@ csv header;
     CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
-copy sales
-from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\sales.csv'
-delimiter ','
-csv header;
+COPY sales FROM 'D:\SQL Projects\Apple_Retail_store\sales.csv' 
+DELIMITER ','
+CSV HEADER;
+
 /*5. **warranty**: Contains information about warranty claims.
    - `claim_id`: Unique identifier for each warranty claim.
    - `claim_date`: Date the claim was made.
@@ -86,7 +102,6 @@ CREATE TABLE warranty (
     repair_status VARCHAR(50) NOT NULL,     -- Claim status (e.g., Paid Repaired, Warranty Void)
     CONSTRAINT fk_sales FOREIGN KEY (sale_id) REFERENCES sales(sale_id)
 );
-copy warranty
-from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\warranty.csv'
-delimiter ','
-csv header;
+COPY warranty FROM 'D:\SQL Projects\Apple_Retail_store\warranty.csv' 
+DELIMITER ','
+CSV HEADER;
