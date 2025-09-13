@@ -1,0 +1,501 @@
+category_id,category_name
+1,Desktop_1
+2,Power Bank_2
+3,Television_3
+4,Headphones_4
+5,Camera_5
+6,Projector_6
+7,Router_7
+8,Wearable_8
+9,Power Bank_9
+10,Speaker_10
+11,Keyboard_11
+12,Laptop_12
+13,Gaming Console_13
+14,Drone_14
+15,Television_15
+16,Television_16
+17,Tablet_17
+18,Tablet_18
+19,Charger_19
+20,Monitor_20
+21,Power Bank_21
+22,Speaker_22
+23,Laptop_23
+24,Gaming Console_24
+25,Tablet_25
+26,Smartphone_26
+27,Smartwatch_27
+28,Smartphone_28
+29,Projector_29
+30,Drone_30
+31,Camera_31
+32,Charger_32
+33,Tablet_33
+34,Smartphone_34
+35,Gaming Console_35
+36,Projector_36
+37,Drone_37
+38,Tablet_38
+39,Projector_39
+40,Router_40
+41,Gaming Console_41
+42,Television_42
+43,Smartwatch_43
+44,Monitor_44
+45,Projector_45
+46,Television_46
+47,Smartphone_47
+48,Projector_48
+49,Headphones_49
+50,Router_50
+51,Laptop_51
+52,Printer_52
+53,Gaming Console_53
+54,Laptop_54
+55,Tablet_55
+56,Printer_56
+57,Laptop_57
+58,Headphones_58
+59,Smartphone_59
+60,Headphones_60
+61,Smartphone_61
+62,Mouse_62
+63,Wearable_63
+64,Drone_64
+65,Desktop_65
+66,Power Bank_66
+67,Printer_67
+68,Printer_68
+69,Laptop_69
+70,Tablet_70
+71,Router_71
+72,Television_72
+73,Desktop_73
+74,Monitor_74
+75,Headphones_75
+76,Smartwatch_76
+77,Smartwatch_77
+78,Printer_78
+79,Desktop_79
+80,Drone_80
+81,Power Bank_81
+82,Mouse_82
+83,Printer_83
+84,Headphones_84
+85,Speaker_85
+86,Power Bank_86
+87,Keyboard_87
+88,Router_88
+89,Camera_89
+90,Television_90
+91,Drone_91
+92,Charger_92
+93,Smartwatch_93
+94,Desktop_94
+95,Keyboard_95
+96,Monitor_96
+97,Power Bank_97
+98,Desktop_98
+99,Monitor_99
+100,Laptop_100
+101,Camera_101
+102,Tablet_102
+103,Smartphone_103
+104,Gaming Console_104
+105,Charger_105
+106,Desktop_106
+107,Laptop_107
+108,Printer_108
+109,Printer_109
+110,Smartwatch_110
+111,Monitor_111
+112,Wearable_112
+113,Speaker_113
+114,Charger_114
+115,Gaming Console_115
+116,Router_116
+117,Laptop_117
+118,Printer_118
+119,Desktop_119
+120,Mouse_120
+121,Tablet_121
+122,Mouse_122
+123,Gaming Console_123
+124,Router_124
+125,Headphones_125
+126,Keyboard_126
+127,Charger_127
+128,Headphones_128
+129,Gaming Console_129
+130,Speaker_130
+131,Printer_131
+132,Wearable_132
+133,Projector_133
+134,Laptop_134
+135,Keyboard_135
+136,Tablet_136
+137,Desktop_137
+138,Wearable_138
+139,Wearable_139
+140,Power Bank_140
+141,Power Bank_141
+142,Gaming Console_142
+143,Television_143
+144,Wearable_144
+145,Camera_145
+146,Smartwatch_146
+147,Monitor_147
+148,Smartphone_148
+149,Television_149
+150,Router_150
+151,Desktop_151
+152,Desktop_152
+153,Keyboard_153
+154,Mouse_154
+155,Smartwatch_155
+156,Camera_156
+157,Television_157
+158,Tablet_158
+159,Speaker_159
+160,Projector_160
+161,Speaker_161
+162,Printer_162
+163,Smartwatch_163
+164,Keyboard_164
+165,Charger_165
+166,Drone_166
+167,Charger_167
+168,Keyboard_168
+169,Power Bank_169
+170,Keyboard_170
+171,Smartwatch_171
+172,Wearable_172
+173,Printer_173
+174,Projector_174
+175,Camera_175
+176,Charger_176
+177,Router_177
+178,Headphones_178
+179,Smartphone_179
+180,Tablet_180
+181,Drone_181
+182,Laptop_182
+183,Headphones_183
+184,Headphones_184
+185,Television_185
+186,Camera_186
+187,Desktop_187
+188,Printer_188
+189,Monitor_189
+190,Wearable_190
+191,Speaker_191
+192,Tablet_192
+193,Keyboard_193
+194,Projector_194
+195,Camera_195
+196,Keyboard_196
+197,Smartwatch_197
+198,Laptop_198
+199,Mouse_199
+200,Headphones_200
+201,Gaming Console_201
+202,Smartwatch_202
+203,Keyboard_203
+204,Gaming Console_204
+205,Monitor_205
+206,Printer_206
+207,Mouse_207
+208,Speaker_208
+209,Wearable_209
+210,Monitor_210
+211,Router_211
+212,Wearable_212
+213,Wearable_213
+214,Router_214
+215,Printer_215
+216,Desktop_216
+217,Smartphone_217
+218,Wearable_218
+219,Tablet_219
+220,Gaming Console_220
+221,Mouse_221
+222,Wearable_222
+223,Charger_223
+224,Television_224
+225,Tablet_225
+226,Gaming Console_226
+227,Smartwatch_227
+228,Smartwatch_228
+229,Keyboard_229
+230,Router_230
+231,Wearable_231
+232,Gaming Console_232
+233,Camera_233
+234,Desktop_234
+235,Smartwatch_235
+236,Desktop_236
+237,Gaming Console_237
+238,Smartphone_238
+239,Drone_239
+240,Desktop_240
+241,Router_241
+242,Camera_242
+243,Speaker_243
+244,Smartwatch_244
+245,Smartwatch_245
+246,Smartphone_246
+247,Speaker_247
+248,Monitor_248
+249,Gaming Console_249
+250,Headphones_250
+251,Laptop_251
+252,Laptop_252
+253,Keyboard_253
+254,Gaming Console_254
+255,Gaming Console_255
+256,Projector_256
+257,Power Bank_257
+258,Wearable_258
+259,Headphones_259
+260,Charger_260
+261,Camera_261
+262,Smartphone_262
+263,Drone_263
+264,Tablet_264
+265,Smartphone_265
+266,Drone_266
+267,Wearable_267
+268,Wearable_268
+269,Television_269
+270,Tablet_270
+271,Drone_271
+272,Headphones_272
+273,Smartwatch_273
+274,Keyboard_274
+275,Wearable_275
+276,Keyboard_276
+277,Keyboard_277
+278,Monitor_278
+279,Laptop_279
+280,Drone_280
+281,Router_281
+282,Mouse_282
+283,Printer_283
+284,Tablet_284
+285,Gaming Console_285
+286,Drone_286
+287,Tablet_287
+288,Router_288
+289,Printer_289
+290,Television_290
+291,Desktop_291
+292,Speaker_292
+293,Drone_293
+294,Projector_294
+295,Projector_295
+296,Keyboard_296
+297,Smartphone_297
+298,Smartphone_298
+299,Drone_299
+300,Monitor_300
+301,Monitor_301
+302,Desktop_302
+303,Keyboard_303
+304,Desktop_304
+305,Tablet_305
+306,Tablet_306
+307,Headphones_307
+308,Camera_308
+309,Camera_309
+310,Keyboard_310
+311,Power Bank_311
+312,Printer_312
+313,Camera_313
+314,Drone_314
+315,Power Bank_315
+316,Gaming Console_316
+317,Printer_317
+318,Projector_318
+319,Projector_319
+320,Charger_320
+321,Smartphone_321
+322,Power Bank_322
+323,Monitor_323
+324,Gaming Console_324
+325,Printer_325
+326,Speaker_326
+327,Drone_327
+328,Drone_328
+329,Smartphone_329
+330,Projector_330
+331,Drone_331
+332,Charger_332
+333,Charger_333
+334,Television_334
+335,Mouse_335
+336,Router_336
+337,Headphones_337
+338,Charger_338
+339,Wearable_339
+340,Printer_340
+341,Television_341
+342,Monitor_342
+343,Printer_343
+344,Power Bank_344
+345,Desktop_345
+346,Gaming Console_346
+347,Smartwatch_347
+348,Gaming Console_348
+349,Tablet_349
+350,Smartphone_350
+351,Charger_351
+352,Printer_352
+353,Television_353
+354,Desktop_354
+355,Gaming Console_355
+356,Smartphone_356
+357,Desktop_357
+358,Projector_358
+359,Keyboard_359
+360,Speaker_360
+361,Drone_361
+362,Drone_362
+363,Desktop_363
+364,Charger_364
+365,Television_365
+366,Smartphone_366
+367,Keyboard_367
+368,Charger_368
+369,Laptop_369
+370,Drone_370
+371,Television_371
+372,Gaming Console_372
+373,Wearable_373
+374,Headphones_374
+375,Monitor_375
+376,Charger_376
+377,Headphones_377
+378,Gaming Console_378
+379,Speaker_379
+380,Tablet_380
+381,Power Bank_381
+382,Camera_382
+383,Wearable_383
+384,Smartwatch_384
+385,Printer_385
+386,Mouse_386
+387,Charger_387
+388,Smartphone_388
+389,Headphones_389
+390,Mouse_390
+391,Television_391
+392,Laptop_392
+393,Power Bank_393
+394,Camera_394
+395,Monitor_395
+396,Speaker_396
+397,Printer_397
+398,Power Bank_398
+399,Smartphone_399
+400,Keyboard_400
+401,Mouse_401
+402,Tablet_402
+403,Mouse_403
+404,Smartwatch_404
+405,Television_405
+406,Smartwatch_406
+407,Power Bank_407
+408,Drone_408
+409,Camera_409
+410,Charger_410
+411,Charger_411
+412,Monitor_412
+413,Power Bank_413
+414,Speaker_414
+415,Smartwatch_415
+416,Projector_416
+417,Laptop_417
+418,Keyboard_418
+419,Desktop_419
+420,Headphones_420
+421,Wearable_421
+422,Gaming Console_422
+423,Smartwatch_423
+424,Power Bank_424
+425,Television_425
+426,Laptop_426
+427,Tablet_427
+428,Router_428
+429,Printer_429
+430,Desktop_430
+431,Laptop_431
+432,Drone_432
+433,Gaming Console_433
+434,Desktop_434
+435,Smartwatch_435
+436,Drone_436
+437,Desktop_437
+438,Camera_438
+439,Smartwatch_439
+440,Headphones_440
+441,Smartphone_441
+442,Router_442
+443,Projector_443
+444,Router_444
+445,Charger_445
+446,Power Bank_446
+447,Desktop_447
+448,Smartwatch_448
+449,Desktop_449
+450,Keyboard_450
+451,Printer_451
+452,Power Bank_452
+453,Router_453
+454,Wearable_454
+455,Printer_455
+456,Keyboard_456
+457,Camera_457
+458,Charger_458
+459,Laptop_459
+460,Desktop_460
+461,Laptop_461
+462,Monitor_462
+463,Monitor_463
+464,Drone_464
+465,Gaming Console_465
+466,Tablet_466
+467,Printer_467
+468,Smartwatch_468
+469,Camera_469
+470,Keyboard_470
+471,Router_471
+472,Monitor_472
+473,Charger_473
+474,Mouse_474
+475,Speaker_475
+476,Camera_476
+477,Desktop_477
+478,Mouse_478
+479,Power Bank_479
+480,Power Bank_480
+481,Monitor_481
+482,Charger_482
+483,Power Bank_483
+484,Tablet_484
+485,Gaming Console_485
+486,Headphones_486
+487,Smartphone_487
+488,Tablet_488
+489,Power Bank_489
+490,Tablet_490
+491,Speaker_491
+492,Laptop_492
+493,Camera_493
+494,Headphones_494
+495,Charger_495
+496,Desktop_496
+497,Wearable_497
+498,Monitor_498
+499,Charger_499
+500,Camera_500

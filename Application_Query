@@ -1,0 +1,93 @@
+### Easy to Medium (10 Questions)
+
+--1. Find the number of stores in each country.
+
+select country, count(store_id) as total_stores from stores
+group by country;
+
+select * from sales;
+select * from products;
+select * from category;
+select * from stores;
+select * from warranty;
+
+
+--2. Calculate the total number of 
+--units sold by each store.
+
+select stores.store_id,stores.store_name,
+count(sales.quantity) from stores
+join sales on sales.store_id = stores.store_id
+group by 1,2;
+
+
+--3. Identify how many sales occurred in December 2023.
+
+select  count(*) as total_sales from sales
+where sale_date between '2023-12-01' and '2023-12-31'
+
+--4. Determine how many stores have never had a warranty claim filed.
+select * from stores;
+select country,count(city) as total_city from stores
+--where country='India'
+group by 1;
+
+select * from warranty;
+
+5. Calculate the percentage of warranty claims marked as "Warranty Void".
+6. Identify which store had the highest total units sold in the last year.
+--7. Count the number of unique products sold in the 
+
+select * from products 
+where extract(month from launch_date) =10;
+
+select count(product_name) as total_product  from products
+where extract(year from launch_date) =2021 ;
+--8. Find the average price of products in each category.
+select * from products;
+select * from category;
+
+select category_id,product_name,round(avg(price)) as average_price_of_products
+from products group by 1,2 order by 1;
+
+--9. How many warranty claims were filed in 2020?
+select * from warranty;
+select count(claim_id) as total_warranty_claims from warranty
+where extract(year from claim_date) = 2020 and repair_status= 'Paid';
+
+
+--10. For each store, identify the best-selling day based on highest quantity sold.
+select * from stores;
+select * from sales;
+
+with daily_Sales as (
+	select 
+	 stores.store_name as Store_Name, 
+	 to_char(sales.sale_date,'Day') as sale_day, 
+	 sum(sales.quantity) as highest_quantity
+	 from stores join sales on stores.store_id=sales.store_id
+	 group by 1,2
+	 --order by 1;
+  ),
+  ranked_Sales as (
+    select 
+	  Store_Name,
+	  sale_day ,
+	  highest_quantity,
+	  rank() 
+	     over(partition by Store_Name 
+			  order by highest_quantity DESC 
+			 )  as rank
+	  from daily_Sales
+  )
+
+
+select 
+  store_name,
+  sale_day as best_selling_day,
+  highest_quantity
+  from ranked_Sales
+  where rank=1
+  order by 1;
+  
+  

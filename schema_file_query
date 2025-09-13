@@ -1,0 +1,92 @@
+/*1. **stores**: Contains information about Apple retail stores.
+   - `store_id`: Unique identifier for each store.
+   - `store_name`: Name of the store.
+   - `city`: City where the store is located.
+   - `country`: Country of the store.
+   */
+create table stores(
+     store_id int primary key,
+	 store_name varchar(50),
+	city varchar(50),
+	country varchar(50)
+);
+
+copy stores
+from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project--
+      -Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---
+      Analyzing-Millions-of-Sales-Rows-main\stores.csv'
+delimiter ','
+csv header;
+/*2. **category**: Holds product category information.
+   - `category_id`: Unique identifier for each product category.
+   - `category_name`: Name of the category. */
+   
+create table category(
+ category_id int primary key,
+ category_name varchar(50)	
+
+ );
+
+copy category
+from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---
+      Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---
+	  Analyzing-Millions-of-Sales-Rows-main\category.csv'
+delimiter ','
+csv header;
+/*3. **products**: Details about Apple products.
+   - `product_id`: Unique identifier for each product.
+   - `product_name`: Name of the product.
+   - `category_id`: References the category table.
+   - `launch_date`: Date when the product was launched.
+   - `price`: Price of the product. */
+   
+ CREATE TABLE products (
+    product_id INT PRIMARY KEY,          -- Unique ID for each product
+    product_name VARCHAR(100) NOT NULL,  -- Product name
+    category_id INT,                     -- Foreign key referencing category table
+    launch_date DATE,                    -- Launch date of the product
+    price DECIMAL(10,2) NOT NULL,        -- Product price
+    CONSTRAINT fk_category FOREIGN KEY (category_id) REFERENCES category(category_id)
+);
+copy products
+from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\products.csv'
+delimiter ','
+csv header;
+/*4. **sales**: Stores sales transactions.
+   - `sale_id`: Unique identifier for each sale.
+   - `sale_date`: Date of the sale.
+   - `store_id`: References the store table.
+   - `product_id`: References the product table.
+   - `quantity`: Number of units sold. */
+  drop table sales; 
+   CREATE TABLE sales (
+    sale_id INT PRIMARY KEY,           -- Unique ID for each sale
+    sale_date DATE NOT NULL,           -- Date of the sale
+    store_id INT,                      -- Foreign key referencing store table
+    product_id INT,                    -- Foreign key referencing product table
+    quantity INT NOT NULL,             -- Units sold
+    CONSTRAINT fk_stores FOREIGN KEY (store_id) REFERENCES stores(store_id),
+    CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+copy sales
+from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\sales.csv'
+delimiter ','
+csv header;
+/*5. **warranty**: Contains information about warranty claims.
+   - `claim_id`: Unique identifier for each warranty claim.
+   - `claim_date`: Date the claim was made.
+   - `sale_id`: References the sales table.
+   - `repair_status`: Status of the warranty claim (e.g., Paid Repaired, Warranty Void).  */
+   
+CREATE TABLE warranty (
+    claim_id INT PRIMARY KEY,               -- Unique ID for each warranty claim
+    claim_date DATE NOT NULL,               -- Date claim was made
+    sale_id INT,                            -- Foreign key referencing sales table
+    repair_status VARCHAR(50) NOT NULL,     -- Claim status (e.g., Paid Repaired, Warranty Void)
+    CONSTRAINT fk_sales FOREIGN KEY (sale_id) REFERENCES sales(sale_id)
+);
+copy warranty
+from 'D:\SQL Projects\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\Apple-Retail-Sales-SQL-Project---Analyzing-Millions-of-Sales-Rows-main\warranty.csv'
+delimiter ','
+csv header;
