@@ -188,17 +188,7 @@ SELECT
 FROM yearly_sales
 ORDER BY store_id, year;
 
---3.Calculate the correlation between product price and warranty claims for products sold in the last five years, segmented by price range.
-
-
-select products.product_name,products.price,warranty.repair_status,
-COUNT(warranty.claim_id) AS total_claims
-from stores join sales on stores.store_id= sales.store_id
-join warranty on sales.sale_id = warranty.sale_id 
-join products on stores.store_id= products.store_id
-where warranty.repair_status='Paid' and warranty.claim_date >= current_date - interval '5 years'
-group by 1,2,3
-
+--3. Calculate the correlation between product price and warranty claims for products sold in the last five years, segmented by price range.
 
 WITH product_claims AS (
     SELECT 
@@ -234,7 +224,7 @@ FROM segmented
 GROUP BY price_range;
 
 
---4.Identify the store with the highest percentage of "Paid Repaired" claims relative to total claims filed.
+--4. Identify the store with the highest percentage of "Paid Repaired" claims relative to total claims filed.
 select * from warranty where repair_status='Paid';
 select * from products;
 select * from category;
@@ -254,7 +244,7 @@ WHERE w.claim_date >= CURRENT_DATE - INTERVAL '5 years'
 GROUP BY st.store_name
 ORDER BY st.store_name;
 
---5.Write a query to calculate the monthly running total of sales for each store over the past four years and compare trends during this period.  
+--5. Write a query to calculate the monthly running total of sales for each store over the past four years and compare trends during this period.  
 select * from warranty where repair_status='Paid';
 select * from products;
 select * from category;
